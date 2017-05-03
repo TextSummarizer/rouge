@@ -1,0 +1,3 @@
+
+0 ROUGE-1 Average_R: 0.47850 (95%-conf.int. 0.45964 - 0.49734)0 ROUGE-2 Average_R: 0.12397 (95%-conf.int. 0.11127 - 0.13693)0 ROUGE-3 Average_R: 0.03601 (95%-conf.int. 0.02815 - 0.04460)0 ROUGE-4 Average_R: 0.01467 (95%-conf.int. 0.00935 - 0.02083)0 ROUGE-L Average_R: 0.29944 (95%-conf.int. 0.28553 - 0.31484)mean: 0.190518
+
