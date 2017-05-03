@@ -43,9 +43,9 @@ class SummaryGenerator:
             data.export_summary(output_dir_path=self.destination_path, filename=filename, text=summary)
 
 s = summarizer.Summarizer(model_path="C:/enwiki_20161220_skip_300.bin")
-body_dir = 'rouge-data/body/'
-target_length = 'rouge-data/len.txt'
-destination = 'rouge-data/systems/'
+body_dir = 'body/'
+target_length = 'len.txt'
+destination = 'systems/'
 sg = SummaryGenerator(body_dir, target_length, destination)
 sg.run(s)
 

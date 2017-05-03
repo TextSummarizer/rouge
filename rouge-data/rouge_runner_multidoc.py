@@ -9,11 +9,11 @@ import rouge
 # data_path = 'C:/Users/Peppo/Desktop/w2vm/rouge4MultiLing/rouge/data'
 # system_summary_path = 'C:/evaluation/095/summaries_300_bugfix/'
 # gold_standard_path = 'C:/evaluation/summaries_300_500_eval/'
-results_path = 'rouge-data/results.txt'
-script_path = 'rouge-data/ROUGE-1.5.5.pl'
-data_path = 'rouge-data/data'
-gold_standard_path = 'rouge-data/gold_standard'
-system_summary_path = 'rouge-data/systems/'
+results_path = 'results.txt'
+script_path = 'ROUGE-1.5.5.pl'
+data_path = 'data'
+gold_standard_path = 'models/'
+system_summary_path = 'systems/'
 
 print 'Grid search on summaryes with ROUGE metrics: STARTED!'
 rouge.compute(results_path=results_path,

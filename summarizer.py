@@ -26,17 +26,19 @@ class Summarizer:
     def set_redundancy_threshold(self, value):
         self.redundancy_threshold = value
 
-    def summarize(self, input_path, summary_length):
-        sentences = self._preprocessing(input_path, self.regex)
-        centroid = self._gen_centroid(sentences)
+    def summarize(self, input_path, summary_length, centroid, num_topics, num_words):
+        sentences = []
+        if centroid == "tfidf":
+            sentences = self._preprocessing_for_tfidf(input_path, self.regex)
+            centroid = self._gen_centroid_tfidf(sentences)
+        if centroid == "lda":
+            sentences, sentences_for_centroid = self._preprocessing_for_lda(input_path, self.regex)
+            centroid = self._gen_centroid_lda(sentences_for_centroid, num_topics, num_words)
         sentences_dict = self._sentence_vectorizer(sentences)
         summary = self._sentence_selection(centroid, sentences_dict, summary_length)
         return summary
 
-    def export(self, output_path):
-        pass
-
-    def _preprocessing(self, input_path, regex):
+    def _preprocessing_for_tfidf(self, input_path, regex):
         # Get splitted sentences
         data = d.get_data(input_path)
 
@@ -62,9 +64,54 @@ class Summarizer:
 
         return data
 
-    def _gen_centroid(self, sentences):
+    def _preprocessing_for_lda(self, input_path, regex):
+        # Get splitted sentences
+        data = d.get_data(input_path)
+
+        # Add points at the end of the sentence
+        data = d.add_points(data)
+
+        # Store the sentence before process them. We need them to build final summary
+        self.sentence_retriever = data
+
+        # Remove punctuation
+        if regex:
+            data = d.remove_punctuation_regex(data)
+        else:
+            data = d.remove_punctuation_nltk(data)
+
+        # stopwords - stemming
+        data = d.remove_stopwords(data)
+        data = d.stemming(data)
+
+        sentences = [sentence.split(" ") for sentence in data]
+        tmp = []
+        for sentence in sentences:
+            tmp.append(filter(lambda word: word != '', sentence))
+
+        return data, tmp
+
+    def _gen_centroid_lda(self, sentences, num_topics, num_words):
+        from gensim import models, corpora
+
+        # Find relevant terms
+        dictionary = corpora.Dictionary(sentences)  # Usage: remember (id -> term) mapping
+        corpus = [dictionary.doc2bow(text) for text in sentences]  # build matrix (corpus is the matrix)
+        lda_model = models.ldamodel.LdaModel(corpus, num_topics=num_topics, id2word=dictionary)
+
+        lda_topics = lda_model.show_topics(num_topics=num_topics, formatted=True, num_words=num_words)
+        top_topic_words = []
+        for topic in lda_topics:
+            topic_words = [x.split("*")[1][1:-1] for x in topic[1].split("+")]
+            top_topic_words.append(topic_words)
+
+        # Build centroid
+        flatten_words = [top_word for vector in top_topic_words for top_word in vector]
+        top_words_vectorized = map(lambda word: self.lookup_table.vec(word), flatten_words)
+        return sum(top_words_vectorized) / len(top_words_vectorized)
+
+    def _gen_centroid_tfidf(self, sentences):
         from sklearn.feature_extraction.text import TfidfVectorizer
-        import numpy as np
 
         # Get relevant terms
         tf = TfidfVectorizer()

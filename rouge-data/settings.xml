@@ -1,7 +1,7 @@
 <ROUGE_EVAL version="1.5.7">
 <EVAL ID="TASK_0f8047e125d506e389b7f2d2f2d7f289">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">0f8047e125d506e389b7f2d2f2d7f289_body.txt</P>
@@ -11,8 +11,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_0fb33cd018ad2920a6c4fcfaba506f06">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">0fb33cd018ad2920a6c4fcfaba506f06_body.txt</P>
@@ -22,8 +22,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_1081931192d131fc74ffa01ede12c158">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">1081931192d131fc74ffa01ede12c158_body.txt</P>
@@ -33,8 +33,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_132a33e8586a65700024a05fa7b18c5c">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">132a33e8586a65700024a05fa7b18c5c_body.txt</P>
@@ -44,8 +44,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_1cb20522497387fafcbcbad3aa397aae">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">1cb20522497387fafcbcbad3aa397aae_body.txt</P>
@@ -55,8 +55,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_20db08878a9223d33bd3265b3ea2d1d1">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">20db08878a9223d33bd3265b3ea2d1d1_body.txt</P>
@@ -66,8 +66,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_22e29f01d39bd08169b7eea1bbafa155">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">22e29f01d39bd08169b7eea1bbafa155_body.txt</P>
@@ -77,8 +77,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_2c62e37c92e29ebd614d8dfb4694a095">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">2c62e37c92e29ebd614d8dfb4694a095_body.txt</P>
@@ -88,8 +88,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_3106974ba4d193d7307e38b76a6797da">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">3106974ba4d193d7307e38b76a6797da_body.txt</P>
@@ -99,8 +99,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_4a9978eae71578badccfe4a52ca4e35f">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">4a9978eae71578badccfe4a52ca4e35f_body.txt</P>
@@ -110,8 +110,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_642c93130b00be86b469c74301d0fedc">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">642c93130b00be86b469c74301d0fedc_body.txt</P>
@@ -121,8 +121,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_67d2ee3f54bb658b9d0d4c5526c451fc">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">67d2ee3f54bb658b9d0d4c5526c451fc_body.txt</P>
@@ -132,8 +132,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_6c55b7de50e0b56a6d80a0f66460d9c5">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">6c55b7de50e0b56a6d80a0f66460d9c5_body.txt</P>
@@ -143,8 +143,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_781d52fa3248ac89aec4988b9372bafc">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">781d52fa3248ac89aec4988b9372bafc_body.txt</P>
@@ -154,8 +154,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_7b0500ddb94e2db0e00b70920e8168bb">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">7b0500ddb94e2db0e00b70920e8168bb_body.txt</P>
@@ -165,8 +165,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_954f24a87481cb51ed73383a83686784">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">954f24a87481cb51ed73383a83686784_body.txt</P>
@@ -176,8 +176,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_9ff08bb0a9333e867a44030022a392a9">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">9ff08bb0a9333e867a44030022a392a9_body.txt</P>
@@ -187,8 +187,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_a3a137e54c3c164364cf541424e3d478">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">a3a137e54c3c164364cf541424e3d478_body.txt</P>
@@ -198,8 +198,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_b14bbeb7bbf9f80b9eb4fbed8df313a1">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">b14bbeb7bbf9f80b9eb4fbed8df313a1_body.txt</P>
@@ -209,8 +209,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_b2e1a4867bbf791526db3d2b080a0831">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">b2e1a4867bbf791526db3d2b080a0831_body.txt</P>
@@ -220,8 +220,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_b9b21839432b2e894708f51eb5ee678d">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">b9b21839432b2e894708f51eb5ee678d_body.txt</P>
@@ -231,8 +231,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_b9d7e95d9e9e75894dc1611aa549d431">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">b9d7e95d9e9e75894dc1611aa549d431_body.txt</P>
@@ -242,8 +242,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_ca103597686e15559d4983425b907737">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">ca103597686e15559d4983425b907737_body.txt</P>
@@ -253,8 +253,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_d4562c813cd9afdb4b488c27d4aa7c92">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">d4562c813cd9afdb4b488c27d4aa7c92_body.txt</P>
@@ -264,8 +264,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_da37860338fa47cd3bbc28c30dad92bc">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">da37860338fa47cd3bbc28c30dad92bc_body.txt</P>
@@ -275,8 +275,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_e0dbb600081ec1661e58ff27364163f1">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">e0dbb600081ec1661e58ff27364163f1_body.txt</P>
@@ -286,8 +286,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_e1f4cea38fd3d654ed307f4685c1cade">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">e1f4cea38fd3d654ed307f4685c1cade_body.txt</P>
@@ -297,8 +297,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_ea8fd2a90772f6c9ed525eddc7698ae2">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">ea8fd2a90772f6c9ed525eddc7698ae2_body.txt</P>
@@ -308,8 +308,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_f555eee2cec40b01728b48738746d678">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">f555eee2cec40b01728b48738746d678_body.txt</P>
@@ -319,8 +319,8 @@
 </MODELS>
 </EVAL>
 <EVAL ID="TASK_feedc24a067e279b75b5c9fbfea1dfd5">
-<MODEL-ROOT>rouge-data/gold_standard</MODEL-ROOT>
-<PEER-ROOT>rouge-data/systems/</PEER-ROOT>
+<MODEL-ROOT>models/</MODEL-ROOT>
+<PEER-ROOT>systems/</PEER-ROOT>
 <INPUT-FORMAT TYPE="SPL"></INPUT-FORMAT>
 <PEERS>
 <P ID="0">feedc24a067e279b75b5c9fbfea1dfd5_body.txt</P>

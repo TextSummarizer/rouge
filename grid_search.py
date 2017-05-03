@@ -1,6 +1,7 @@
-import summarizer as s
 import summary_generator as sg
+
 import rouge
+import summarizer as s
 
 # Set your paths
 model_path = 'C:/Users/Peppo/Desktop/w2vm/enwiki_20161220_skip_300.bin'
