@@ -42,10 +42,20 @@ class SummaryGenerator:
             summary = summarizer.summarize(self.body_dir_path + filename, summary_length)
             data.export_summary(output_dir_path=self.destination_path, filename=filename, text=summary)
 
-s = summarizer.Summarizer(model_path="C:/enwiki_20161220_skip_300.bin")
+    def run_lda(self, summarizer, num_topic, num_words):
+        # Read summary's target lengths. Store them in a map (file_name -> target_length)
+        len_map = read_len(self.target_length_path)
+
+        # Iterate over text directory and use the summarizer.py to generate summaries
+        for filename in os.listdir(self.body_dir_path):
+            summary_length = len_map[filename]
+            summary = summarizer.summarize(self.body_dir_path + filename, summary_length, "lda", num_topic, num_words)
+            data.export_summary(output_dir_path=self.destination_path, filename=filename, text=summary)
+
+"""s = summarizer.Summarizer(model_path="C:/enwiki_20161220_skip_300.bin")
 body_dir = 'body/'
 target_length = 'len.txt'
 destination = 'systems/'
 sg = SummaryGenerator(body_dir, target_length, destination)
-sg.run(s)
+sg.run(s)"""
 

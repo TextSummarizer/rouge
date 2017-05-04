@@ -66,48 +66,65 @@ class Summarizer:
 
     def _preprocessing_for_lda(self, input_path, regex):
         # Get splitted sentences
-        data = d.get_data(input_path)
+        sentences_for_summary = d.get_data(input_path)
 
         # Add points at the end of the sentence
-        data = d.add_points(data)
+        sentences_for_summary = d.add_points(sentences_for_summary)
 
         # Store the sentence before process them. We need them to build final summary
-        self.sentence_retriever = data
+        self.sentence_retriever = sentences_for_summary
 
         # Remove punctuation
         if regex:
-            data = d.remove_punctuation_regex(data)
+            sentences_for_summary = d.remove_punctuation_regex(sentences_for_summary)
         else:
-            data = d.remove_punctuation_nltk(data)
+            sentences_for_summary = d.remove_punctuation_nltk(sentences_for_summary)
 
         # stopwords - stemming
-        data = d.remove_stopwords(data)
-        data = d.stemming(data)
+        sentences_for_summary = d.remove_stopwords(sentences_for_summary)
+        sentences_for_summary = d.stemming(sentences_for_summary)
 
-        sentences = [sentence.split(" ") for sentence in data]
-        tmp = []
+        sentences = [sentence.split(" ") for sentence in sentences_for_summary]
+        sentences_for_centroid = []
         for sentence in sentences:
-            tmp.append(filter(lambda word: word != '', sentence))
+            sentences_for_centroid.append(filter(lambda word: word != '', sentence))
 
-        return data, tmp
+        return sentences_for_summary, sentences_for_centroid
 
     def _gen_centroid_lda(self, sentences, num_topics, num_words):
         from gensim import models, corpora
 
-        # Find relevant terms
+        # Find topic and probability distribution for each topic (with LDA)
         dictionary = corpora.Dictionary(sentences)  # Usage: remember (id -> term) mapping
         corpus = [dictionary.doc2bow(text) for text in sentences]  # build matrix (corpus is the matrix)
         lda_model = models.ldamodel.LdaModel(corpus, num_topics=num_topics, id2word=dictionary)
+        show_topics = lda_model.show_topics()
 
-        lda_topics = lda_model.show_topics(num_topics=num_topics, formatted=True, num_words=num_words)
-        top_topic_words = []
-        for topic in lda_topics:
-            topic_words = [x.split("*")[1][1:-1] for x in topic[1].split("+")]
-            top_topic_words.append(topic_words)
+        # For each topic, I want to get only "num_words" term (the most relevant, based on probability distribution)
+        # Selected token will be part of my "centroid_set"
+        # Warning: I have to filter out relevant words that are not in w2v model
+        centroid_set = []
+        for topic in show_topics:
+            token_probability_records = topic[1].split(" + ")
+            i = 0
+            topic_word_counter = 0
+            stop = False
 
-        # Build centroid
-        flatten_words = [top_word for vector in top_topic_words for top_word in vector]
-        top_words_vectorized = map(lambda word: self.lookup_table.vec(word), flatten_words)
+            while i < len(token_probability_records) and not stop:
+                # String manipulation (probability distribution is in string format)
+                next_record = token_probability_records[i]
+                split_record = next_record.split("*")
+                token = split_record[1].replace("\"", "")  # (split_record[0] is probability of the token)
+
+                if token not in centroid_set:
+                    if not self.lookup_table.unseen(token):
+                        centroid_set.append(token)
+                        topic_word_counter += 1
+                        if topic_word_counter == num_words:
+                            stop = True
+                i += 1
+
+        top_words_vectorized = map(lambda word: self.lookup_table.vec(word), centroid_set)
         return sum(top_words_vectorized) / len(top_words_vectorized)
 
     def _gen_centroid_tfidf(self, sentences):

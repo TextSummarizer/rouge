@@ -86,6 +86,30 @@ def compute_for_grid_search(
     print 'Rouge: done!'
 
 
+def compute_for_lda(
+        topic_values,                       # range of topic you want to check
+        word_values,                        # words number you want to check
+        results_path,                       # tell me where store your results
+        script_path,                        # tell me where is your rouge script
+        data_path,                          # tell me where is your data (same dir of rouge script, generally)
+        summary_destination_path,           # tell me where are stored your system-generated summaries
+        gold_standard_path):                # tell me where are your gold standards
+
+    results = open(results_path, 'w')
+    for topic in topic_values:
+        print 'Computing ROUGE for topic ' + str(topic) + '...'
+
+        for word in word_values:
+            new_systems_dir_path = summary_destination_path + 'topic_' + str(topic) + "_word_" + str(word)
+
+            create_settings_file(new_systems_dir_path, gold_standard_path)
+            msg = _run_rouge_script(script_path, data_path)
+            _post_processing(msg, results, new_systems_dir_path)
+
+    results.close()
+    print 'Rouge: done!'
+
+
 def compute(
         results_path,                       # tell me where store your results
         script_path,                        # tell me where is your rouge script
